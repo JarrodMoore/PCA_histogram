@@ -10,7 +10,7 @@ import os
 
 def main():
     '''
-        Converts data from a csv into histograms of
+        Converts data from a csv into a GIF of histograms of
         pairwise distances as dimensions are reduced
     '''
     parser = argparse.ArgumentParser()
