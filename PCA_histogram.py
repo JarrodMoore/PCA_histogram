@@ -73,11 +73,11 @@ def main():
     else:
        y_lim, x_lim = args.set_y_lim, args.set_x_lim 
     if args.output_file_name == None:
-        out_file_name = file_name[:4]
+        out_file_name = file_name[:4] + '.png'
     else:
         out_file_name = args.output_file_name
     if args.dim_floor == None:
-        start_dim = 0
+        start_dim = 1
     else:
         start_dim = args.dim_floor
     if args.dim_ciel == None:
@@ -99,7 +99,7 @@ def main():
         M_temp_reduced_dist_list = M_temp_reduced_dist_matrix.flatten()
         plt.hist(M_temp_reduced_dist_list, bins=100, color='b')
         plt.title(plot_name)
-        plt.xlabel(str(dim_counter))
+        plt.xlabel('total dimensions:' + str(dim_counter))
         plt.savefig(file_name[:-4] + '_' + str(dim_counter).zfill(4) + '.png')
         plt.clf()
     if args.ascending:
