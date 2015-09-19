@@ -18,5 +18,5 @@ Command line arguments:
 *  --ignore_header: Ignores the first row of data.
 * --ignore_row_names: Ignores the first column of data.
 * --plot_name string: Sets the name of the plot on the histograms. Default is the name of the csv.
-*  --dim_floor int: Sets the lowest dimension the histogram will go to. Default is 0.
+*  --dim_floor int: Sets the lowest dimension the histogram will go to. Default is 1.
 * --dim_ciel int: Sets the highest dimension the histogram will go to. Default is the dimension of the data set.
