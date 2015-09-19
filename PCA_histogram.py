@@ -73,7 +73,7 @@ def main():
     else:
        y_lim, x_lim = args.set_y_lim, args.set_x_lim 
     if args.output_file_name == None:
-        out_file_name = file_name[:4] + '.png'
+        out_file_name = file_name[:4] + '.gif'
     else:
         out_file_name = args.output_file_name
     if args.dim_floor == None:
@@ -102,6 +102,7 @@ def main():
         plt.xlabel('total dimensions:' + str(dim_counter))
         plt.savefig(file_name[:-4] + '_' + str(dim_counter).zfill(4) + '.png')
         plt.clf()
+    
     if args.ascending:
         subprocess.call(['convert', '-delay', '20', '-loop', '0',\
             file_name[:-4] + '_*.png', out_file_name])
